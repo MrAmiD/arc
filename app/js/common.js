@@ -135,54 +135,5 @@ $(function() {
         }, 500);
     });
 
-
-    $('#my-menu').html($('.main-menu').html());
-
-    //var  socials = $("#my-menu").data();
-    $("#my-menu").mmenu({
-        "extensions": [
-            "fx-panels-none",
-            "fx-listitems-slide"
-        ],
-        "offCanvas": {
-            "position": "bottom"
-        },
-        "navbar": {
-            "title": ""
-        },
-        "pageScroll": true
-    });
-
-    //Если меню выезжает снизу, расчитываем размер шапки и выкатываем меню до неё
-    //mmenu bagfix
-
-    // $(".mm-menu.mm-offcanvas.mm-bottom").css('height', $(window).height() - $('.header-top').height());
-    var api = $("#my-menu").data( "mmenu" );
-    //   Hook into methods
-    // api.bind( "open:after", function() {
-    //     });
-
-    api.bind( "open:finish", function() {
-        $("#menu-btn").addClass('is-active');
-
-
-        //bugfix fixed menu 1-3 START
-        $(window).scroll();
-        $("#my-header").css({ top: $(window).scrollTop()});
-    });
-    api.bind( "open:start", function() {
-        $(window).scroll();
-        $(".mm-menu.mm-offcanvas.mm-bottom").css('height', $(window).height() - $('#my-header').height() + $(window).scrollTop());
-        //bugfix fixed menu 2
-        $("#my-header").css({ top: $(window).scrollTop() });
-    });
-    api.bind( "open:before", function() {
-        $('#my-menu').css('top', $('#my-header').outerHeight() - $(window).scrollTop());
-    });
-    api.bind( "close:finish", function() {
-        $("#menu-btn").removeClass('is-active');
-
-        //bugfix fixed menu 3 END
-        $("#my-header").css({ top: 0});
-    });
+ 
 });

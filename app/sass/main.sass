@@ -9,28 +9,28 @@
 	color: #989898
 	opacity: 1
 	font-size: 18px
-	font-weight: 300
+	font-weight: 500
 	font-family: $default-font
 
 *:-moz-placeholder
 	color: #989898
 	opacity: 1
 	font-size: 18px
-	font-weight: 300
+	font-weight: 500
 	font-family: $default-font
 
 *::-moz-placeholder
 	color: #989898
 	opacity: 1
 	font-size: 18px
-	font-weight: 300
+	font-weight: 500
 	font-family: $default-font
 
 *:-ms-input-placeholder
 	color: #989898
 	opacity: 1
 	font-size: 18px
-	font-weight: 300
+	font-weight: 500
 	font-family: $default-font
 
 body input:focus:required:invalid,
@@ -78,7 +78,7 @@ p
 	font-family: $default-font
 	font-size: 16px
 	color: $dark
-	font-weight: 300
+	font-weight: 500
 	line-height: 26px
 a
 	text-decoration: none
@@ -89,15 +89,14 @@ a
 	&:hover, &:focus
 		text-decoration: none
 		color: $accent
-button:not(.btn-flat)
-	-webkit-appearance: button-bevel
+
 
 input
 	font-family: $default-font
 	display: inline-block
 	border: solid 1px #d9d9d9
 	font-size: 18px
-	font-weight: 300
+	font-weight: 500
 	height: 36px
 	line-height: 36px
 	padding-left: 20px
@@ -113,7 +112,6 @@ input
 		opacity: 0
 	100%
 		opacity: 1
-
 @keyframes bgMove
 	0%
 		background-position: 0px
@@ -285,7 +283,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		font-size: 18px
 		line-height: 50px
 		padding: 0px
-		font-weight: 300
+		font-weight: 500
 	.mm-next:after, .mm-prev:before
 		width: 15px
 		height: 15px
@@ -848,7 +846,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		padding-left: 10px
 		border: solid 1px #d9d9d9
 		font-size: 18px
-		font-weight: 300
+		font-weight: 500
 		height: 36px
 		line-height: 36px
 		border-bottom-left-radius: 5px
@@ -1008,6 +1006,556 @@ html.mm-opening .mm-menu~.mm-slideout
 		display: none
 #my-footer
 	min-height: 400px
+
+
+#my-header
+	background: #005b70
+
+
+
+.logo-c
+	img
+		max-width: 100%
+
+.cont-c
+	display: flex
+	align-items: center
+	justify-content: space-around
+	position: relative
+	width: 500px
+	height: 35px
+	padding: 0px 50px
+	margin: auto
+	max-width: 100%
+	margin-right: 0px
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 35px
+		top: 0px
+		left: 50%
+		transform: translate(-50%, 0)
+		background-image: url('../img/contBg.png')
+		background-repeat: no-repeat
+		background-position: center
+		z-index: 0
+	.cont-i
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		z-index: 1
+		*
+			color: $yel
+			font-size: 12px
+			line-height: 1
+		a
+			margin-left: 20px
+
+.lvl2-r
+	align-items: center
+	margin-top: 40px
+
+.cont2-c
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	.cont-r
+		display: flex
+		align-items: center
+		margin-bottom: 5px
+		&:last-child
+			margin-bottom: 0px
+		.svg-c
+			align-items: center
+			display: flex
+			margin-right: 10px
+	*
+		color: $yel
+		text-align: right
+		font-size: 14px
+
+.main-win-sec
+	background-image: url("../img/mainwinBg.png")
+	height: 763px
+	position: relative
+	max-height: 100vh
+	background-position: center bottom
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0px
+		width: 100%
+		background: url("../img/bgGradient.png")
+		background-position: center bottom
+		height: 342px
+		max-height: 100vh
+
+.content-slider
+	height: 623px
+	position: relative
+	z-index: 2
+	padding-top: 120px
+	max-height: 100vh
+	.h1
+		font-size: 48px
+		text-transform: uppercase
+	.discr
+		font-size: 24px
+		color: #FFFFFF
+		font-weight: 700
+		margin-top: 30px
+		margin-bottom: 60px
+	.infograph-b
+		position: absolute
+		right: 111px
+		top: 140px
+.cust-btn
+	cursor: pointer
+	background: #647168
+	border: none
+	color: $yel
+	border-radius: 100px
+	font-size: 14px
+	line-height: 35px
+	padding: 0 30px
+	padding-right: 100px
+	text-align: left
+	position: relative
+	transition: all .3s ease
+	&.to-circle
+		pointer-events: none
+	.tele-i
+		display: flex
+		align-items: center
+		justify-content: center
+		.svg-c
+			display: flex
+			align-items: center
+			justify-content: center
+		position: absolute
+		top: 0px
+		right: 0px
+		width: 80px
+		height: 100%
+		background: #415255
+		border-top-right-radius: 100px
+		border-bottom-right-radius: 100px
+	&.trc-btn
+		background: $accent2
+		border: solid 1px $yel-l
+		color: $yel-l
+		text-transform: uppercase
+		.tele-i
+			border-left: solid 1px $yel-l
+			background: $accent2
+		&:hover
+			background: $yel
+			color: $accent
+
+.scroll-mouse
+	position: relative
+	z-index: 10
+
+.content-mouse
+	position: absolute
+	bottom: 0px
+	height: 120px
+	width: 100%
+	.discr
+		text-transform: uppercase
+		color: $yel
+		font-size: 14px
+		text-align: center
+	.mouse
+		position: absolute
+		bottom: 0px
+		display: block
+		width: 24px
+		height: 54px
+		margin: 0 auto 20px
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		border: 2px solid $yel-l
+		border-radius: 5px
+		left: 50%
+		transform: translateX(-50%)
+		animation: ani-mouse 2s linear infinite
+		cursor: pointer
+		&:before
+			content: ''
+			position: absolute
+			display: block
+			width: 2px
+			height: 30px
+			background: $yel-l
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+.remont-sec
+	background: $accent2
+	padding: 75px 0px
+	padding-bottom: 38px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: -18px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 18px 20px 0 20px
+		border-color: $accent2 transparent transparent transparent
+		left: 50%
+		transform: translate(0, -50%)
+	.rem-r-m
+		top: -37px
+		position: relative
+	.remont-content
+		.h1
+			color: #506a67
+			font-size: 100px
+			text-transform: uppercase
+			font-family: $default-font2
+			font-weight: 700
+			transform: scaleY(1.4)
+			white-space: nowrap
+		.rem-c
+			position: relative
+			padding-left: 40px
+		.h2
+			color: $yel-l
+			font-size: 41px
+			margin-bottom: 15px
+			margin-bottom: 30px
+		p
+			color: $yel-l
+			font-size: 14px
+			line-height: 1.2
+	.info-event
+		background: #506a67
+		color: $yel-l
+		display: flex
+		align-items: center
+		padding: 8px 15px
+		border-radius: 5px
+		margin-top: 60px
+		margin-bottom: 30px
+		.info-i
+			margin-right: 10px
+		.txt-i
+			font-size: 14px
+
+.preim-c
+	background: #FFFFFF
+	width: 500px
+	margin: auto
+	max-width: 100%
+	.title-h
+		background-color: $accent
+		height: 76px
+		padding: 15px
+		display: flex
+		align-items: center
+		padding-left: 108px
+		color: $yel-l
+		background-image: url("../img/clockBg.png")
+		background-repeat: no-repeat
+		background-position: left -2px
+	.preim-cont
+		padding: 25px
+		padding-bottom: 60px
+		p
+			font-size: 14px
+			line-height: 1.2
+
+.tech-sec
+	padding: 75px 0px
+	background: $grey
+	.h2
+		font-size: 48px
+		text-align: center
+		margin-bottom: 60px
+		font-family: $default-font2
+.stage-r
+	.stage-c
+		margin-bottom: 30px
+		.stage-i
+			display: flex
+			justify-content: center
+			.title-stage
+				font-size: 48px
+				text-transform: uppercase
+				font-weight: 700
+				color: $accent2
+				margin-bottom: 30px
+				transform: scale(1, 1.2)
+				font-family: $default-font2
+			.cont-stage
+				padding: 25px
+				background: #FFFFFF
+				border-bottom-right-radius: 5px
+				border-top-right-radius: 5px
+				p
+					font-size: 14px
+					margin-bottom: 0px
+					line-height: 1.2
+			.prev
+				min-width: 240px
+				width: 240px
+				max-width: 100%
+				background-size: cover
+				background-position: center
+				border-bottom-left-radius: 5px
+				border-top-left-radius: 5px
+
+.documents-sec
+	padding: 60px 0px
+	background: $accent2
+	.h2
+		text-align: center
+		color: #FFFFFF
+		font-size: 48px
+		font-family: $default-font2
+
+.nature-sec
+	background: $accent
+	padding: 60px 0px
+	background-image: url("../img/trees.png")
+	background-repeat: no-repeat
+	background-position: center 182px
+	padding-bottom: 200px
+	.h2
+		text-align: center
+		color: #4a661d
+		font-size: 48px
+		font-family: $default-font2
+	p
+		color: #FFFFFF
+		text-align: center
+		max-width: 100%
+		width: 500px
+		margin: auto
+		font-size: 14px
+		line-height: 1.2
+/*   	 --------------------------------
+ * Main Components
+ * --------------------------------
+
+.cd-modal
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	visibility: hidden
+	opacity: 0
+	pointer-events: none
+	-webkit-transition: visibility 0s 0.3s, opacity 0.3s 0s, z-index 0s 0.3s
+	-moz-transition: visibility 0s 0.3s, opacity 0.3s 0s, z-index 0s 0.3s
+	transition: visibility 0s 0.3s, opacity 0.3s 0s, z-index 0s 0.3s
+	background: $accent2
+	.cd-modal-content
+		height: 100%
+		width: 100%
+		padding: 3em 5%
+		text-align: left
+		overflow-y: auto
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+		display: flex
+		align-items: center
+		justify-content: center
+	p
+		color: #ffffff
+		line-height: 1.6
+		margin: 2em 0
+
+.form-c
+	display: flex
+	align-items: center
+	flex-direction: column
+	.h1
+		color: $yel
+		font-size: 48px
+		font-weight: 700
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 30px
+	input
+		width: 100%
+		margin-bottom: 15px
+		border-radius: 5px
+		background: #506A67
+		border: none
+		font-size: 14px
+		color: $yel
+	textarea
+		width: 100%
+		border-radius: 5px
+		background: #506A67
+		border: none
+		font-size: 14px
+		color: $yel
+		padding: 15px
+		resize: none
+		resize: none
+	*::-webkit-input-placeholder
+		color: $yel
+		font-size: 14px
+	*:-moz-placeholder
+		color: #989898
+		font-size: 18px
+	*::-moz-placeholder
+		color: #989898
+		font-size: 18px
+	*:-ms-input-placeholder
+		color: #989898
+		font-size: 18px
+	.btn-c
+		display: flex
+		justify-content: flex-end
+		width: 100%
+		margin-top: 20px
+	.cont2-c
+		position: fixed
+		bottom: 60px
+		flex-direction: row
+		align-items: center
+		flex-wrap: wrap
+		justify-content: center
+		.cont-r
+			margin-bottom: 10px
+			margin-right: 20px
+	p
+		color: $yel
+		margin-bottom: 0px
+		a
+			color: $yel
+			text-decoration: underline
+.modal-is-visible .cd-modal
+	z-index: 1
+	visibility: visible
+	opacity: 1
+	pointer-events: auto
+	-webkit-transition: visibility 0s 0s, opacity 0.3s 0s, z-index 0s 0s
+	-moz-transition: visibility 0s 0s, opacity 0.3s 0s, z-index 0s 0s
+	transition: visibility 0s 0s, opacity 0.3s 0s, z-index 0s 0s
+	.cd-modal-content
+		-webkit-overflow-scrolling: touch
+
+@media only screen and (min-width: 768px)
+	.cd-modal .cd-modal-content
+		padding: 4em 10%
+
+@media only screen and (min-width: 1170px)
+	.cd-modal
+		.cd-modal-content
+			padding: 6em 20%
+		p
+			font-size: 2rem
+			line-height: 2
+
+.cd-modal-action
+	position: relative
+	.btn, .cd-modal-bg
+		display: inline-block
+		height: 4em
+		background-color: #34383c
+	.btn
+		width: 12.5em
+		border-radius: 5em
+		color: #ffffff
+		line-height: 4em
+		white-space: nowrap
+		font-weight: 700
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+		-webkit-transition: color 0.2s 0.3s, width 0.3s 0s
+		-moz-transition: color 0.2s 0.3s, width 0.3s 0s
+		transition: color 0.2s 0.3s, width 0.3s 0s
+		&.to-circle
+			width: 4em
+			color: transparent
+			-webkit-transition: color 0.2s 0s, width 0.3s 0.2s
+			-moz-transition: color 0.2s 0s, width 0.3s 0.2s
+			transition: color 0.2s 0s, width 0.3s 0.2s
+	.cd-modal-bg
+		position: absolute
+		z-index: 1
+		left: 50%
+		top: 0
+		width: 4em
+		border-radius: 50%
+		opacity: 0
+		visibility: hidden
+		-webkit-transform: translateZ(0)
+		-moz-transform: translateZ(0)
+		-ms-transform: translateZ(0)
+		-o-transform: translateZ(0)
+		transform: translateZ(0)
+		-webkit-transform: translateX(-2em)
+		-moz-transform: translateX(-2em)
+		-ms-transform: translateX(-2em)
+		-o-transform: translateX(-2em)
+		transform: translateX(-2em)
+		-webkit-transition: visibility 0s 0.5s
+		-moz-transition: visibility 0s 0.5s
+		transition: visibility 0s 0.5s
+		&.is-visible
+			opacity: 1
+			visibility: visible
+
+.cd-modal-close
+	position: fixed
+	z-index: 1
+	top: 20px
+	right: 5%
+	height: 50px
+	width: 50px
+	border-radius: 50%
+	background: rgba(0, 0, 0, 0.3) url(../img/cd-icon-close.svg) no-repeat center center
+	/* image replacement
+	overflow: hidden
+	text-indent: 100%
+	white-space: nowrap
+	visibility: hidden
+	opacity: 0
+	-webkit-transform: translateZ(0)
+	-moz-transform: translateZ(0)
+	-ms-transform: translateZ(0)
+	-o-transform: translateZ(0)
+	transform: translateZ(0)
+	-webkit-transform: scale(0)
+	-moz-transform: scale(0)
+	-ms-transform: scale(0)
+	-o-transform: scale(0)
+	transform: scale(0)
+	-webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s
+	-moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s
+	transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s
+
+.no-touch .cd-modal-close:hover
+	background-color: rgba(0, 0, 0, 0.5)
+
+.modal-is-visible .cd-modal-close
+	visibility: visible
+	opacity: 1
+	-webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s
+	-moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s
+	transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s
+	-webkit-transform: scale(1)
+	-moz-transform: scale(1)
+	-ms-transform: scale(1)
+	-o-transform: scale(1)
+	transform: scale(1)
+
+@media only screen and (min-width: 768px)
+	.cd-modal-close
+		top: 70px
+
 /*Project end*/
 
 

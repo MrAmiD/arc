@@ -8,8 +8,11 @@
 
 //Large: ≥992px
 +media-breakpoint-down(lg)
-  /**/
-
+  .content-slider .infograph-b
+    right: 30px
+    top: 140px
+  .remont-sec .remont-content .h1
+    font-size: 85px
 //Medium: ≥768px
 +media-breakpoint-down(md)
   .content
@@ -21,14 +24,87 @@
         display: block
         min-width: 500px
         width: 100%
+  .content-slider .infograph-b
+    display: none
+  .cont-c
+    margin: auto!important
+  .remont-sec .remont-content .h1
+    white-space: unset
+    font-size: 60px
+  .remont-sec .remont-content .rem-c
+    padding-left: 0px
+  .remont-sec
+    .preim-c
+      margin-top: 45px
+      width: 100%
 //Small: ≥576px
 +media-breakpoint-down(sm)
-  /**/
+  .cont2-c
+    align-items: flex-start
+    margin-top: 15px
+  .content-mouse
+    display: none
 //Extra small: >0
 +media-breakpoint-down(xs)
-	/**/
-
-
+  .remont-sec .remont-content .h1
+    font-size: 35px
+  .remont-sec .remont-content .h2
+    font-size: 23px
+  .remont-sec .rem-r-m
+    top: 0px
+  .form-c .cont2-c
+    bottom: 5px
+    position: relative
+    margin-top: 45px
+  .content-slider .h1
+    font-size: 32px
+  .cont-c .cont-i *
+    line-height: 1.7
+  .cont-c:after
+    display: none
+  .content-slider
+    padding-top: 15px
+  .content-slider .discr
+    font-size: 18px
+    margin-top: 15px
+    margin-bottom: 30px
+  .content-slider
+    padding-top: 45px
+  .main-win-sec
+    background-position: left top
+    .cust-btn
+      font-size: 12px
+    .cont-c
+      padding: 10px 15px
+      flex-direction: column
+      height: auto
+      background: $accent2
+      align-items: flex-start
+      justify-content: center
+      border-bottom: 2px solid $yel
+    .lvl2-r
+      margin-top: 30px
+    .lvl1-r
+      .col-12
+        padding: 0px
+  .remont-sec .remont-content .rem-c
+    margin-top: 15px
+  .stage-r .stage-c .stage-i
+    flex-direction: column
+  .stage-r .stage-c .stage-i .prev
+    height: 150px
+    width: 100%
+  .tech-sec .h2
+    font-size: 32px
+    margin-bottom: 45px
+  .stage-r .stage-c .stage-i .title-stage
+    font-size: 32px
+  .documents-sec .h2
+    font-size: 32px
+  .nature-sec .h2
+    font-size: 32px
+  .nature-sec
+    padding-top: 45px
 /*==========  Mobile First  ==========*/
 
 //Extra small: <576px
