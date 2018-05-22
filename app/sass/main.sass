@@ -1004,8 +1004,7 @@ html.mm-opening .mm-menu~.mm-slideout
 				fill: $accent
 	.slick-next:before, .slick-prev:before
 		display: none
-#my-footer
-	min-height: 400px
+
 
 
 #my-header
@@ -1091,6 +1090,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		background-position: center bottom
 		height: 342px
 		max-height: 100vh
+		background-repeat: no-repeat
 
 .content-slider
 	height: 623px
@@ -1111,6 +1111,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		position: absolute
 		right: 111px
 		top: 140px
+		opacity: 0.7
 .cust-btn
 	cursor: pointer
 	background: #647168
@@ -1123,7 +1124,11 @@ html.mm-opening .mm-menu~.mm-slideout
 	padding-right: 100px
 	text-align: left
 	position: relative
-	transition: all .3s ease
+	&.morphing-btn_circle
+		overflow: hidden!important
+		color: transparent!important
+		.tele-i
+			display: none
 	&.to-circle
 		pointer-events: none
 	.tele-i
@@ -1150,9 +1155,9 @@ html.mm-opening .mm-menu~.mm-slideout
 		.tele-i
 			border-left: solid 1px $yel-l
 			background: $accent2
-		&:hover
-			background: $yel
-			color: $accent
+		//&:hover
+		//	background: $yel
+		//	color: $accent
 
 .scroll-mouse
 	position: relative
@@ -1285,6 +1290,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		.stage-i
 			display: flex
 			justify-content: center
+			height: 100%
 			.title-stage
 				font-size: 48px
 				text-transform: uppercase
@@ -1340,6 +1346,101 @@ html.mm-opening .mm-menu~.mm-slideout
 		margin: auto
 		font-size: 14px
 		line-height: 1.2
+
+.slider-doc-c
+	.slider-doc
+		display: flex
+		align-items: center
+		width: 100%
+		justify-content: center
+		margin-top: 60px
+		a
+			display: block
+			margin: 0 15px
+			width: 145px
+			max-width: 100%
+			img
+				width: 145px
+				max-width: 100%
+
+.qa-client-sec
+	padding: 60px 0px
+	.h2
+		font-size: 70px
+		font-family: $default-font2
+		text-align: center
+		text-transform: uppercase
+	.h3
+		font-size: 48px
+		text-transform: uppercase
+		font-family: $default-font2
+		margin-bottom: 15px
+.map-sec
+	height: 366px
+	background: $accent
+
+#my-footer
+	background: $accent2
+	position: relative
+	&:after
+		content: ''
+		width: 50%
+		top: 40px
+		height: 300px
+		position: absolute
+		left: 0px
+		//border:  solid 1px $accent
+		//border-top-right-radius: 13px
+		background-image: url("../img/ShadowF.png")
+		background-repeat: no-repeat
+		background-position: right 10px
+		z-index: 0
+	.lvl1f-r
+		padding-top: 80px
+		padding-bottom: 16px
+		position: relative
+		z-index: 1
+	.logo-c
+		display: flex
+		align-items: flex-start
+		flex-direction: column
+		img
+			max-width: 100%
+			margin-bottom: 15px
+	.cust-btn.trc-btn
+		padding-right: 30px
+	.discr
+		color: $yel-l
+		font-size: 10px
+		margin-top: 30px
+		line-height: 1.2
+	.comp-info
+		text-align: right
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		p
+			color: $yel-l
+			font-size: 14px
+			line-height: 1.5
+		.solided
+			border-bottom: solid 3px #7B888C
+			max-width: 340px
+			padding-bottom: 18px
+			margin-bottom: 18px
+		a
+			color: $yel-l
+	.lvl2f-r
+		background: rgba(#fffdeb, 0.8)
+		padding: 12px 0px
+		margin: 0px
+		.copyright
+			margin: 0px
+			font-size: 14px
+	.copyright-r
+		align-items: center
+	.logop-c
+		text-align: right
 /*   	 --------------------------------
  * Main Components
  * --------------------------------
@@ -1432,6 +1533,7 @@ html.mm-opening .mm-menu~.mm-slideout
 	p
 		color: $yel
 		margin-bottom: 0px
+		margin-top: 10px
 		a
 			color: $yel
 			text-decoration: underline
@@ -1552,6 +1654,9 @@ html.mm-opening .mm-menu~.mm-slideout
 	-o-transform: scale(1)
 	transform: scale(1)
 
+
+
+
 @media only screen and (min-width: 768px)
 	.cd-modal-close
 		top: 70px
@@ -1559,4 +1664,96 @@ html.mm-opening .mm-menu~.mm-slideout
 /*Project end*/
 
 
+
+/* Styling for element used in example
+
+/* fancyMorph
+
+.morphing-btn-wrap
+	text-align: center
+	display: inline-block
+	position: relative
+
+.morphing-btn
+	-webkit-transition: color 0.2s 0.3s, width 0.2s 0s
+	-moz-transition: color 0.2s 0.3s, width 0.2s 0s
+	-o-transition: color 0.2s 0.3s, width 0.2s 0s
+	transition: color 0.2s 0.3s, width 0.2s 0s
+	white-space: nowrap
+	will-change: width, color
+	transform: translate3d(0, 0, 0)
+
+.morphing-btn_circle
+	color: transparent
+	padding-left: 0
+	padding-right: 0
+	width: 35.6px !important
+	/* Override inline style rule
+	-webkit-transition: color 0.2s 0s, width .3s 0.2s
+	-moz-transition: color 0.2s 0s, width .3s 0.2s
+	-o-transition: color 0.2s 0s, width .3s 0.2s
+	transition: color 0.2s 0s, width .3s 0.2s
+
+.morphing-btn-clone
+	position: fixed
+	background: $accent2
+	width: 3em
+	height: 3em
+	border-radius: 50%
+	z-index: 99
+	font-size: 0.875em
+	-webkit-transition: all 0.6s cubic-bezier(0.65, 0.05, 0.36, 1)
+	-moz-transition: all 0.6s cubic-bezier(0.65, 0.05, 0.36, 1)
+	-o-transition: all 0.6s cubic-bezier(0.65, 0.05, 0.36, 1)
+	transition: all 0.6s cubic-bezier(0.65, 0.05, 0.36, 1)
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden
+
+.morphing-btn-clone_visible
+	-webkit-transform: scale(1) !important
+	-moz-transform: scale(1) !important
+	-ms-transform: scale(1) !important
+	-o-transform: scale(1) !important
+	transform: scale(1) !important
+
+.morphing-close
+	position: fixed
+	top: 5%
+	right: 5%
+	background: rgba(0, 0, 0, 0.2)
+	text-indent: -9999px
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	border: 0
+	overflow: hidden
+	transition: background-color 0.2s ease 0s, transform .2s ease-in-out
+	z-index: 99999
+	cursor: pointer
+	outline: none
+	&:active
+		margin-top: -1px
+	&:before, &:after
+		content: ""
+		position: absolute
+		left: 12px
+		top: 24px
+		width: 26px
+		height: 1.5px
+		background: #fff
+	&:before
+		-ms-transform: rotate(-45deg)
+		-o-transform: rotate(-45deg)
+		-webkit-transform: rotate(-45deg)
+		-moz-transform: rotate(-45deg)
+		transform: rotate(-45deg)
+	&:after
+		-ms-transform: rotate(45deg)
+		-o-transform: rotate(45deg)
+		-webkit-transform: rotate(45deg)
+		-moz-transform: rotate(45deg)
+		transform: rotate(45deg)
+
+.popup-default
+	background: $accent2
 @import "media" // Всегда в конце
